@@ -13,13 +13,13 @@ import java.util.Map;
 public class CalculatorController {
     
     @GetMapping("/calculator/add")
-    public Map<String, Object> add(@RequestParam(value = "listofnumbers", required = false) String numbers) {
+    public Map<String, Object> add(@RequestParam(value = "numberList", required = false) String numbers) {
         Map<String, Object> response = new HashMap<>();
         int sum = 0;
         
         // handle null or empty input.
         if (numbers == null || numbers.trim().isEmpty()) {
-            response.put("error", "No input provided. Please provide numbers separated by commas, e.g. /calculator/add?listofnumbers=1,5,4");
+            response.put("error", "No input provided. Please provide numbers separated by commas, e.g. /calculator/add?numberList=1,5,4");
             return response;
         }
 
@@ -34,7 +34,7 @@ public class CalculatorController {
             response.put("message", "Sum calculated successfully.");
         } catch (NumberFormatException e) {
             // handle invalid input.
-            response.put("error", "Not Valid Input . Please provide only numbers separated by commas, e.g./calculator/add?listofnumbers=1,5,4");
+            response.put("error", "Not Valid Input . Please provide only numbers separated by commas, e.g./calculator/add?numberList=1,5,4");
         }
         return response;
     }

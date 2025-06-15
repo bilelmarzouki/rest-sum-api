@@ -41,26 +41,26 @@ RestApiSum is a simple RESTful API built with Spring Boot (Java 21) that receive
 ## API Endpoint and Testing
 
 - **Endpoint:** `GET /calculator/add`
-- **Query Parameter:** `listofnumbers` (comma-separated integers)
+- **Query Parameter:** `numberList` (comma-separated integers)
 - **Response Example:** `{ "sum": 5 }`
 
 
 You can test the API endpoints using tools like Postman. Here are example requests for different input scenarios:
 
 - **Valid Input:** 
-  Example: http://localhost:8080/calculator/add?listofnumbers=7,-7,5
+  Example: http://localhost:8080/calculator/add?numberList=7,-7,5
   *The expected result is `5`.*
 
 - **Null Input:**  
   Example: http://localhost:8080/calculator/add
-  *(No `listofnumbers` parameter provided)*
+  *(No `numberList` parameter provided)*
 
 - **Invalid Input:**  
-  Example: http://localhost:8080/calculator/add?listofnumbers=7,-7,Adis
+  Example: http://localhost:8080/calculator/add?numberList=7,-7,Adis
   *(Contains a non-numeric value: "Adis")*
 
 - **Empty Input:**
-  Example: http://localhost:8080/calculator/add?listofnumbers=
+  Example: http://localhost:8080/calculator/add?numberList=
   *(Parameter is present but the value is empty)*
 
 ## GitHub Repository

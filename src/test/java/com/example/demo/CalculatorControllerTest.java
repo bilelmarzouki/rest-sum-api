@@ -18,7 +18,7 @@ public class CalculatorControllerTest {
    void testInvalidInput(){
         Map<String, Object> response =  controller.add("6,-6,bilel,5");
         assertNull(response.get("sum"));
-        assertEquals("Not Valid Input . Please provide only numbers separated by commas, e.g./calculator/add?listofnumbers=1,5,4", response.get("error"));
+        assertEquals("Not Valid Input . Please provide only numbers separated by commas, e.g./calculator/add?numberList=1,5,4", response.get("error"));
    }
 
    //Tests that the CalculatorController calculates correctly the sum for valid input.
@@ -26,7 +26,7 @@ public class CalculatorControllerTest {
    void testNoInput(){
         Map<String, Object> response =  controller.add(null);
         assertNull(response.get("sum"));
-        assertEquals("No input provided. Please provide numbers separated by commas, e.g. /calculator/add?listofnumbers=1,5,4", response.get("error"));
+        assertEquals("No input provided. Please provide numbers separated by commas, e.g. /calculator/add?numberList=1,5,4", response.get("error"));
    }
 
    //Tests that the CalculatorController calculates correctly the sum for valid input.
@@ -34,6 +34,6 @@ public class CalculatorControllerTest {
    void testEmptyInput(){
         Map<String, Object> response =  controller.add("");
         assertNull(response.get("sum"));
-        assertEquals("No input provided. Please provide numbers separated by commas, e.g. /calculator/add?listofnumbers=1,5,4", response.get("error"));
+        assertEquals("No input provided. Please provide numbers separated by commas, e.g. /calculator/add?numberList=1,5,4", response.get("error"));
    }
 }
