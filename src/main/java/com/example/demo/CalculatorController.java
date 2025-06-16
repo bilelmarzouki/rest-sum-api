@@ -24,7 +24,7 @@ public class CalculatorController {
         }
 
         try {
-            // sums a comma-separated list of numbers. 
+            // sums a comma-separated list of numbers.
             sum = Arrays.stream(numbers.split(","))
                     .map(String::trim)
                     .filter(s -> !s.isEmpty())
