@@ -18,7 +18,7 @@ public class CalculatorControllerTest {
    void testInvalidInput(){
         Map<String, Object> response =  controller.add("6,-6,bilel,5");
         assertNull(response.get("sum"));
-        assertEquals("Not Valid Input . Please provide only numbers separated by commas, e.g./calculator/add?numberList=1,5,4", response.get("error"));
+        assertEquals("Not Valid Input. Please provide only numbers separated by commas, e.g./calculator/add?numberList=1,5,4", response.get("error"));
    }
 
    // Tests that CalculatorController returns an error message when input is null.

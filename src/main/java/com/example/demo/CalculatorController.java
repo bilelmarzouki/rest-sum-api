@@ -17,14 +17,14 @@ public class CalculatorController {
         Map<String, Object> response = new HashMap<>();
         int sum = 0;
         
-        // handle null or empty input.
+        // Handle null or empty input.
         if (numbers == null || numbers.trim().isEmpty()) {
             response.put("error", "No input provided. Please provide numbers separated by commas, e.g. /calculator/add?numberList=1,5,4");
             return response;
         }
 
         try {
-            // sums a comma-separated list of numbers.
+            // Sums a comma-separated list of numbers.
             sum = Arrays.stream(numbers.split(","))
                     .map(String::trim)
                     .filter(s -> !s.isEmpty())
@@ -33,8 +33,8 @@ public class CalculatorController {
             response.put("sum", sum);
             response.put("message", "Sum calculated successfully.");
         } catch (NumberFormatException e) {
-            // handle invalid (non-numeric) input.
-            response.put("error", "Not Valid Input . Please provide only numbers separated by commas, e.g./calculator/add?numberList=1,5,4");
+            // Handle invalid (non-numeric) input.
+            response.put("error", "Not Valid Input. Please provide only numbers separated by commas, e.g./calculator/add?numberList=1,5,4");
         }
         return response;
     }

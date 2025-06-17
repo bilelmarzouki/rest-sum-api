@@ -31,10 +31,10 @@ RestApiSum is a simple RESTful API built with Spring Boot (Java 21) that receive
 
 ## Principal Files
 
-- `src/main/java/com/example/CalculatorController.java`  
+- `src/main/java/com/example/demo/CalculatorController.java`  
   *Implements the REST API endpoint for sum calculation.*
 
-- `src/test/java/com/example/CalculatorControllerTest.java`  
+- `src/test/java/com/example/demo/CalculatorControllerTest.java`  
   *Contains unit tests for the CalculatorController using JUnit.*
 
 
