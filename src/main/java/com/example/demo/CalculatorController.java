@@ -33,7 +33,7 @@ public class CalculatorController {
             response.put("sum", sum);
             response.put("message", "Sum calculated successfully.");
         } catch (NumberFormatException e) {
-            // handle invalid input.
+            // handle invalid (non-numeric) input.
             response.put("error", "Not Valid Input . Please provide only numbers separated by commas, e.g./calculator/add?numberList=1,5,4");
         }
         return response;
